@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="יצירת קשר" />
+<meta property="og:description" content=" יצירת קשר  דוא&#34;ל:     הודעה:    שלח   " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/contact/" />
+
+<title>יצירת קשר | ספרות המערב - קובץ מסות</title>
+
+
+<link rel="stylesheet" href="/book.min.71e566345e46f93a684c7c842991a3725d0adc015c7093b8b68ff6fb63a20a1f.css" integrity="sha256-ceVmNF5G&#43;TpoTHyEKZGjcl0K3AFccJO4to/2&#43;2OiCh8=">
+
+
+<script defer src="/search.min.80eb3c863aa51ebc5fdc94277f90cc63fcbe0791e5ab753bf998b8eeae71fdb4.js" integrity="sha256-gOs8hjqlHrxf3JQnf5DMY/y&#43;B5Hlq3U7&#43;Zi47q5x/bQ="></script>
+
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+
+
+  
+
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <header class="flex align-center justify-between header">
+  <p><a href="/">
+    ספרות המערב - קובץ מסות | יעל רנן
+  </a></p>
+  
+
+</header>
+
+  <main class="flex container">
+    <div class="book-page">
+      
+<article class="markdown">
+  <div class="section-title"><h1></h1></div>
+  </br>
+  <h1></h1>
+  <h2></h2>
+  <h5></h6>
+
+<h1 id="יצירת-קשר">יצירת קשר</h1>
+
+<form
+  action="https://formspree.io/mbjlrjzb"
+  method="POST"
+>
+  <label>
+    דוא"ל:
+    <input type="text" name="_replyto" size=30>
+  </label>
+  <br/>
+  <br/>
+  <label>
+    הודעה:
+    <textarea name="message" rows=6 cols=40></textarea>
+  </label>
+
+  <!-- your other form fields go here -->
+  <br/><br/>
+  <div class="buttondiv">
+      <button type="submit">שלח</button>
+  </div>
+</form>
+<br/>
+<a href="/">חזרה לתוכן העניינים</a>
+</article>
+
+      
+
+      
+    </div>
+
+    
+
+
+  </main>
+
+  
+
+</body>
+<script>
+  m = document.getElementsByTagName("main")[0];
+  header = document.getElementsByTagName("header")[0];
+  results = document.getElementById("search-results-div");
+  inp = document.getElementById("book-search-input");
+
+  m.addEventListener("click", hideSearchResults, false);
+  header.addEventListener("click", hideSearchResults, false);
+
+  function showSearchResults() {
+    results.style.display = "block";
+  }
+
+  function hideSearchResults(event) {
+    console.log(event);
+    if (event.target!=inp)
+      results.style.display = "none";
+  }
+
+  function clickOnSearchInput() {
+    if (inp.value!="")
+      results.style.display = "block";
+  }
+</script>
+
+</html>
