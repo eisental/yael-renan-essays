@@ -11,7 +11,49 @@
     
       gtag('config', 'UA-21020454-4'); 
   </script>
+  <script>
+    const scrh =  document.documentElement,
+          scrst =  'scrollTop',
+          scrsh =  'scrollHeight';
+    let maxp = 0;
+    document.addEventListener('scroll', function() {
+      const scrb = document.body;
+      const percent = parseInt ( (scrh[scrst]||scrb[scrst]) / ((scrh[scrsh]||scrb[scrsh]) - scrh.clientHeight) * 100);
 
+      if (percent >= 25 && maxp < 25) {
+        gtag('event', 'More than 25%', {
+          'event_category': 'scrolling',
+          'event_label': window.location.href,
+          'non_interaction': true
+        });
+        console.log("precent: " + percent);
+      } else if (percent >= 50 && maxp < 50) {
+        gtag('event', 'More than 50%', {
+          'event_category': 'scrolling',
+          'event_label': window.location.href,
+          'non_interaction': true
+        });
+        console.log("precent: " + percent);
+      } else if (percent >= 75 && maxp < 75) {
+        gtag('event', 'More than 75%', {
+          'event_category': 'scrolling',
+          'event_label': window.location.href,
+          'non_interaction': true
+        });
+        console.log("precent: " + percent);
+      } else if (percent >= 90 && maxp < 90) {
+        gtag('event', 'More than 90%', {
+          'event_category': 'scrolling',
+          'event_label': window.location.href,
+          'non_interaction': true
+        });
+
+      }
+      if (percent > maxp) {
+        maxp = percent;
+      }
+    });
+  </script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="3.3 הטְריקסטֶר" />
 <meta property="og:description" content="הטריקסטֶר, בניגוד לרברבן, הוא הגיבור הקומי שאנחנו צוחקים איתו ולא עליו. הוא מופיע, בין השאר, אצל שייקספיר (פאק בחלום ליל קיץ) ומוֹלייר (המשרת הפיקח בתעלולי סקאפֶּן). דוגמאות מודרניות הן תום סוֹיֶיר של מארק טוֵוין, באגס באני, הילד הממולח בסרט שכחו אותי בבית, ושודד הים ג&rsquo;ק ספארוֹ (ג&rsquo;וני דֶפּ) בסידרת הסרטים שודדי הקאריביים. בספרות העברית הטריקסטר מככב כאֶרבינקא של אפרים קישון, הסבא פֶליקס ביש ילדים זיגזג של דויד גרוסמן, וקוֹפיקוֹ של תמר בורנשטיין־לזר." />

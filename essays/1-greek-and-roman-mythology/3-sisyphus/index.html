@@ -11,7 +11,49 @@
     
       gtag('config', 'UA-21020454-4'); 
   </script>
+  <script>
+    const scrh =  document.documentElement,
+          scrst =  'scrollTop',
+          scrsh =  'scrollHeight';
+    let maxp = 0;
+    document.addEventListener('scroll', function() {
+      const scrb = document.body;
+      const percent = parseInt ( (scrh[scrst]||scrb[scrst]) / ((scrh[scrsh]||scrb[scrsh]) - scrh.clientHeight) * 100);
 
+      if (percent >= 25 && maxp < 25) {
+        gtag('event', 'More than 25%', {
+          'event_category': 'scrolling',
+          'event_label': window.location.href,
+          'non_interaction': true
+        });
+        console.log("precent: " + percent);
+      } else if (percent >= 50 && maxp < 50) {
+        gtag('event', 'More than 50%', {
+          'event_category': 'scrolling',
+          'event_label': window.location.href,
+          'non_interaction': true
+        });
+        console.log("precent: " + percent);
+      } else if (percent >= 75 && maxp < 75) {
+        gtag('event', 'More than 75%', {
+          'event_category': 'scrolling',
+          'event_label': window.location.href,
+          'non_interaction': true
+        });
+        console.log("precent: " + percent);
+      } else if (percent >= 90 && maxp < 90) {
+        gtag('event', 'More than 90%', {
+          'event_category': 'scrolling',
+          'event_label': window.location.href,
+          'non_interaction': true
+        });
+
+      }
+      if (percent > maxp) {
+        maxp = percent;
+      }
+    });
+  </script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="1.3 סיזיפוס: מהוֹמֶרוֹס עד קאמי" />
 <meta property="og:description" content="סיזיפוס ידוע יותר מכל בזכות עונשו הנצחי, שהוליד את המושג &ldquo;סיזיפי&rdquo; – מאמץ מפרך החוזר על עצמו בלי סוף. העונש מתואר במפורט באוֹדיסֶאה של הומרוס (11.593-600):
