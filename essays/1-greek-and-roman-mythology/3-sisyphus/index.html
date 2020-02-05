@@ -26,21 +26,21 @@
           'event_label': window.location.href,
           'non_interaction': true
         });
-        console.log("precent: " + percent);
+
       } else if (percent >= 50 && maxp < 50) {
         gtag('event', 'More than 50%', {
           'event_category': 'scrolling',
           'event_label': window.location.href,
           'non_interaction': true
         });
-        console.log("precent: " + percent);
+
       } else if (percent >= 75 && maxp < 75) {
         gtag('event', 'More than 75%', {
           'event_category': 'scrolling',
           'event_label': window.location.href,
           'non_interaction': true
         });
-        console.log("precent: " + percent);
+
       } else if (percent >= 90 && maxp < 90) {
         gtag('event', 'More than 90%', {
           'event_category': 'scrolling',
@@ -210,29 +210,6 @@ https://github.com/alex-shpak/hugo-book
   
 
 </body>
-<script>
-  m = document.getElementsByTagName("main")[0];
-  header = document.getElementsByTagName("header")[0];
-  results = document.getElementById("search-results-div");
-  inp = document.getElementById("book-search-input");
 
-  m.addEventListener("click", hideSearchResults, false);
-  header.addEventListener("click", hideSearchResults, false);
-
-  function showSearchResults() {
-    results.style.display = "block";
-  }
-
-  function hideSearchResults(event) {
-    console.log(event);
-    if (event.target!=inp)
-      results.style.display = "none";
-  }
-
-  function clickOnSearchInput() {
-    if (inp.value!="")
-      results.style.display = "block";
-  }
-</script>
 
 </html>
